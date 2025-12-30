@@ -1,0 +1,5 @@
+---
+- name: start-httpd
+  ansible.builtin.service:
+    name: httpd
+    state: started# handlers file for devops

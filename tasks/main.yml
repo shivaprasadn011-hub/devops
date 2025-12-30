@@ -1,0 +1,12 @@
+---
+- name: install httpd
+  ansible.builtin.yum:
+    name: httpd
+    state: present
+  notify: start-httpd
+
+- name: copyindex /var/www/html/
+  ansible.builtin.copy:
+    src: index.html
+    dest: "{{ index_dest }}"
+# tasks file for devops
